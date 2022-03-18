@@ -2,6 +2,7 @@
 using System.Runtime.Serialization.Formatters.Binary;
 
 Console.WriteLine("***** Custom Serialization *****\n");
+
 string fileName1 = "String Data.dat";
 string fileName2 = "Data.dat";
 
@@ -28,6 +29,8 @@ using (FileStream fs = File.OpenRead(fileName1))
 
 Data newData = new Data();
 
+Console.WriteLine("Before serialization: " + newData);
+
 BinaryFormatter binaryFormatter2 = new BinaryFormatter();
 
 using (FileStream fs = new FileStream(fileName2, FileMode.Create))
@@ -36,6 +39,8 @@ using (FileStream fs = new FileStream(fileName2, FileMode.Create))
 
     Console.WriteLine($"Saved {fileName2}");
 }
+
+Console.WriteLine("After serialization: " + newData);
 
 BinaryFormatter formatter2 = new BinaryFormatter();
 
