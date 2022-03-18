@@ -27,7 +27,7 @@ namespace XMLExample
             {
                 T obj = (T)serializer.Deserialize(ms);
 
-                Console.WriteLine("=> Saved XML");
+                Console.WriteLine("=> Load XML");
                 return obj;
             }
         }
