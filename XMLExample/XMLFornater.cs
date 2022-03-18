@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace XMLExample
 {
-    internal class XMLFornater
+    internal static class XMLFornater
     {
         public static void SaveAsXMLFormat(Type type, object obj, string fileName)
         {
